@@ -1,23 +1,26 @@
-import './App.css'
+// import XgButton from "./components/xg-button.tsx";
+// import XgDialog from "./components/xg-dialog.tsx";
+import MyApp from "./views/index.tsx";
+import React, { Component } from 'react'
 
-function App() {
-  const personArr = [{ name: '小高',class:'border' },{ name: '哈哈',class:'' },{ name: '嘿嘿',class:'border' }]
-  // const fn = (num: number, e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //   console.log('fn点击', num, e)
-  // }
-  const flag:boolean = true
-  const fn=<T,>(params:T)=>{
-    console.log('fn点击',params)
+export default class App extends Component {
+  state = {
+    isDialogOpen: false
   }
-  return (
-    <>
-      {
-        flag?personArr.map((item, index) => {
-          return <div key={index} className={item.class} onClick={()=>fn(item)}>{item.name}</div>
-        }):null
-      }
-    </>
-  )
-}
 
-export default App
+  handleDialog = () => {
+    this.setState({ isDialogOpen: !this.state.isDialogOpen })
+  }
+
+  render() {
+    return (
+      <div>
+        {/* <XgButton title="按钮1" />
+        <XgButton title="按钮2" />
+        <button onClick={this.handleDialog}>弹框</button>
+        <XgDialog content="这是一个测试对话框" open={this.state.isDialogOpen} /> */}
+        <MyApp />
+      </div>
+    )
+  }
+}
