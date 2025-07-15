@@ -50,7 +50,7 @@ export default class Comment extends Component {
   //     updateTime: val
   //   })
   // }
-
+ 
   // 第二种
   // updateDate(e){
   // console.log(e);
