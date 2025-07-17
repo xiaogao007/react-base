@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '@/views/comment.css'
+import '@/views/Comment.css'
 
 class UserInfo extends Component {
   render() {

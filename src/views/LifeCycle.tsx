@@ -44,12 +44,12 @@ export default class LifeCycle extends Component {
   componentWillUnmount(): void {
     console.log('7、组件将要卸载');
   }
-  handleAdd=()=>{
-    this.setState((prevState)=>{
+  handleAdd = () => {
+    this.setState((prevState) => {
       return {
         count: prevState.count + 1
       }
-    },()=>{
+    }, () => {
       console.log('状态更新后', this.state.count);
     })
   }
@@ -59,10 +59,10 @@ export default class LifeCycle extends Component {
       <>
         <div>{this.props.name}</div>
         <div>{this.state.count}</div>
-        <SubCount count={this.state.count}/>
+        <SubCount count={this.state.count} />
         <button onClick={this.handleAdd}>递增</button>
       </>
-     
+
     )
   }
 }
