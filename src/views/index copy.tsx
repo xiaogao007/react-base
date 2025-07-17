@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import Comment from "./comment";
 import logoUrl from '@/assets/logo.jpg'
-import LifeCycle from './LifeCycle';
 
 export default class MyApp extends Component {
     UserInfo = {
@@ -12,7 +12,7 @@ export default class MyApp extends Component {
     render() {
         return (
             <div>
-                <LifeCycle />
+                <Comment UserInfo={this.UserInfo} />
             </div>
         );
     }
