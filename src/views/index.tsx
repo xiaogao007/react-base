@@ -4,17 +4,27 @@ import LifeCycle from './LifeCycle';
 import Comment from './Comment';
 import ControlInput from './ControlInput';
 import NotControlInput from './NotControlInput';
+import FormSimple from './FormSimple';
+import FunctionComponentProps from './FunctionComponentProps';
+interface UserInfoType {
+    name: string;
+    email: string;
+    avatar: string;
+}
 
 export default class MyApp extends Component {
-    UserInfo = {
+    UserInfo: UserInfoType = {
         name: 'XiaoGao',
         email: 'xiaogao@example.com',
         avatar: logoUrl
     };
-  
+
     render() {
         return (
             <div>
+                <h2>函数组件</h2>
+                <FunctionComponentProps name="XiaoGao" age={18} />
+                <br />
                 <h2>组件通信</h2>
                 <Comment UserInfo={this.UserInfo} />
                 <br />
@@ -26,6 +36,10 @@ export default class MyApp extends Component {
                 <br />
                 <h2>非受控组件</h2>
                 <NotControlInput />
+                <br />
+                <h2>form</h2>
+                <FormSimple />
+                
             </div>
         );
     }
