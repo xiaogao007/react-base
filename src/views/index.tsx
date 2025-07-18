@@ -6,6 +6,8 @@ import ControlInput from './ControlInput';
 import NotControlInput from './NotControlInput';
 import FormSimple from './FormSimple';
 import FunctionComponentProps from './FunctionComponentProps';
+import Components from './components.tsx';
+import ComponentRefs from './ComponentRefs.tsx';
 interface UserInfoType {
     name: string;
     email: string;
@@ -22,6 +24,8 @@ export default class MyApp extends Component {
     render() {
         return (
             <div>
+                <h2>组件</h2>
+                <Components />
                 <h2>函数组件</h2>
                 <FunctionComponentProps name="XiaoGao" age={18} />
                 <br />
@@ -39,7 +43,9 @@ export default class MyApp extends Component {
                 <br />
                 <h2>form</h2>
                 <FormSimple />
-                
+                 <br />
+                <h2>Refs</h2>
+                <ComponentRefs />
             </div>
         );
     }
