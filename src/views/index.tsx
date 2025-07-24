@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import logoUrl from '@/assets/logo.jpg'
-import LifeCycle from './LifeCycle';
-import Comment from './Comment';
-import ControlInput from './ControlInput';
-import NotControlInput from './NotControlInput';
-import FormSimple from './FormSimple';
-import FunctionComponentProps from './FunctionComponentProps';
-import Components from './components.tsx';
-import ComponentRefs from './ComponentRefs.tsx';
+import LifeCycle from './componetns/LifeCycle.tsx';
+import Comment from './componetns/Comment.tsx';
+import ControlInput from './componetns/ControlInput.tsx';
+import NotControlInput from './componetns/NotControlInput.tsx';
+import FormSimple from './componetns/FormSimple.tsx';
+import FunctionComponentProps from './componetns/FunctionComponentProps.tsx';
+import Components from './componetns/Components.tsx';
+import ComponentRefs from './componetns/ComponentRefs.tsx';
 interface UserInfoType {
     name: string;
     email: string;
