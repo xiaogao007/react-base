@@ -8,6 +8,8 @@ import FormSimple from './componetns/FormSimple.tsx';
 import FunctionComponentProps from './componetns/FunctionComponentProps.tsx';
 import Components from './componetns/Components.tsx';
 import ComponentRefs from './componetns/ComponentRefs.tsx';
+import HigherOrderFunction from './componetns/HigherOrderFunction.tsx';
+import Todo from './demo/index.tsx';
 interface UserInfoType {
     name: string;
     email: string;
@@ -24,6 +26,8 @@ export default class MyApp extends Component {
     render() {
         return (
             <div>
+                <h2>待办事项</h2>
+                <Todo />
                 <h2>组件</h2>
                 <Components />
                 <h2>函数组件</h2>
@@ -46,6 +50,9 @@ export default class MyApp extends Component {
                  <br />
                 <h2>Refs</h2>
                 <ComponentRefs />
+                <br />
+                <h2>高阶函数和函数柯里化</h2>
+                <HigherOrderFunction />
             </div>
         );
     }
